@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,46 +10,46 @@ function Footer() {
         <p>Living the moment</p>
       </div>
       <div className="footer-line social-icons">
-        <Link
+        <a
           className="social-icon-link github"
-          to="https://github.com/kirenariyu/"
+          href="https://www.github.com/kirenariyu/"
           target="_blank"
           aria-label="GitHub"
         >
           <i className="fab fa-github" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="social-icon-link instagram"
-          to="/"
+          href="https://www.instagram.com/kirenariyu/"
           target="_blank"
           aria-label="Instagram"
         >
           <i className="fab fa-instagram" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="social-icon-link linkedin"
-          to="https://instagram.com/kirenariyu"
+          href="https://www.linkedin.com/in/kirenariyu"
           target="_blank"
           aria-label="LinkedIn"
         >
           <i className="fab fa-linkedin" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="social-icon-link stack-overflow"
-          to="https://stackoverflow.com/users/3618945/kirenariyu"
+          href="https://www.stackoverflow.com/users/3618945/kirenariyu"
           target="_blank"
           aria-label="Stack Overflow"
         >
           <i className="fab fa-stack-overflow" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="social-icon-link twitter"
-          to="https://twitter.com/kirenariyu"
+          href="https://www.twitter.com/kirenariyu"
           target="_blank"
           aria-label="Twitter"
         >
           <i className="fab fa-twitter" />
-        </Link>
+        </a>
       </div>
       <div className="footer-line">
         <p>@kirenariyu &copy; 2021</p>
