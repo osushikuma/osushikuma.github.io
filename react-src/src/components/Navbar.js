@@ -26,9 +26,9 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            TRVL <i className="fab fa-typo3" />
+            <img src="images/main_logo.png" alt="Navbar Logo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa fa-times" : "fas fa-bars"} />
@@ -45,16 +45,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/contact"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Say Hi
+              <Link to="/contact" className="nav-links">
+                <Button onClick={closeMobileMenu}>Say Hi</Button>
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SAY HI</Button>}
         </div>
       </nav>
     </>

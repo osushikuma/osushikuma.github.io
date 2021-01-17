@@ -5,9 +5,8 @@ import Footer from "../components/Footer";
 export default function Contact() {
   return (
     <>
-      <div className="contact-container">
-        <h1>Want to get in touch?</h1>
-        <h1>I'd love to hear from you.</h1>
+      <div className="container">
+        <h2>CONTACT</h2>
         <form>
           <input
             className="footer-input"
@@ -15,7 +14,7 @@ export default function Contact() {
             type="email"
             placeholder="Your Email"
           />
-          <Button buttonStyle="btn--outline">Subscribe</Button>
+          <Button>Subscribe</Button>
         </form>
       </div>
       <Footer />
