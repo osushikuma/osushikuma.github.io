@@ -11,7 +11,7 @@ function Home() {
             Kamusta, ako si <span>Yumi</span>. <br />
             I'm a Front-end Web Developer.
           </h1>
-          <img src="images/sushi.png" alt="Sushi" />
+          <img src="images/sushi_dog.png" alt="Sushi" />
         </div>
       </div>
       <div className="skills-container container">
