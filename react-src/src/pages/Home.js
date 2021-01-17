@@ -18,20 +18,15 @@ function Home() {
         <h2>SKILLS</h2>
         <div className="cards-container">
           <Card
-            logo={"img"}
-            img={"images/asp.net-mvc.png"}
-            name={"ASP.NET MVC"}
-            per={"30%"}
-          />
-          <Card
             logo={"fa"}
             fa={"fab fa-bootstrap"}
             name={"Bootstrap"}
-            per={"75%"}
+            per={"80%"}
           />
-          <Card logo={"fa"} fa={"fab fa-css3"} name={"CSS"} per={"75%"} />
-          <Card logo={"fa"} fa={"fab fa-html5"} name={"HTML"} per={"75%"} />
-          <Card logo={"fa"} fa={"fab fa-js"} name={"JavaScript"} per={"60%"} />
+          <Card logo={"fa"} fa={"fab fa-css3"} name={"CSS"} per={"80%"} />
+          <Card logo={"fa"} fa={"fab fa-git"} name={"Git"} per={"70%"} />
+          <Card logo={"fa"} fa={"fab fa-html5"} name={"HTML"} per={"80%"} />
+          <Card logo={"fa"} fa={"fab fa-js"} name={"JavaScript"} per={"50%"} />
           <Card
             logo={"img"}
             img={"images/jquery.png"}
@@ -42,22 +37,22 @@ function Home() {
             logo={"img"}
             img={"images/material-ui.png"}
             name={"Material UI"}
-            per={"60%"}
+            per={"30%"}
           />
-          <Card logo={"fa"} fa={"fab fa-node"} name={"Node.js"} per={"40%"} />
+          <Card logo={"fa"} fa={"fab fa-node"} name={"Node.js"} per={"10%"} />
           <Card
             logo={"img"}
             img={"images/photoshop.png"}
             name={"Photoshop"}
-            per={"30%"}
+            per={"70%"}
           />
-          <Card logo={"fa"} fa={"fab fa-react"} name={"ReactJS"} per={"30%"} />
-          <Card logo={"fa"} fa={"fab fa-sass"} name={"SASS"} per={"60%"} />
+          <Card logo={"fa"} fa={"fab fa-react"} name={"ReactJS"} per={"40%"} />
+          <Card logo={"fa"} fa={"fab fa-sass"} name={"SASS"} per={"70%"} />
           <Card
             logo={"img"}
             img={"images/webpack.png"}
             name={"Webpack"}
-            per={"30%"}
+            per={"40%"}
           />
         </div>
         <span>
@@ -80,9 +75,9 @@ function Home() {
           </div>
           <div className="other-skill">
             <div className="other-skill-logo">
-              <i className="fab fa-git" />
+              <i className="fas fa-project-diagram" />
             </div>
-            <span>Git / Version Control</span>
+            <span>MVC Architecture</span>
           </div>
           <div className="other-skill">
             <div className="other-skill-logo">

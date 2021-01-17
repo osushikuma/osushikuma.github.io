@@ -243,6 +243,54 @@ h2 {
   color: #fff;
 }
 
+.about-line:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+form {
+  margin: 0 auto;
+  width: 60%;
+}
+
+form div {
+  margin-bottom: 30px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  border: 1px solid #5c5246;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+form .btn--outline {
+  border-color: #5c5246;
+  color: #5c5246;
+  display: block;
+  margin: 0 auto;
+}
+
 .footer-container {
   align-items: center;
   background-color: #8c7053;
@@ -384,8 +432,15 @@ h2 {
     font-size: 3rem;
   }
 
+  .other-skills-container {
+    display: unset;
+    justify-content: unset;
+  }
+
   .other-skill {
-    width: 90px;
+    display: inline-flex;
+    margin: 0 0 30px;
+    width: 50%;
   }
 
   .other-skill-logo {
