@@ -7,7 +7,7 @@ function Footer() {
         <img src="images/main_logo.png" alt="Main Logo" height="90px" />
       </div>
       <div className="footer-line">
-        <p>Living the moment</p>
+        <p>Inspiring full-stack, improving one at a time.</p>
       </div>
       <div className="footer-line social-icons">
         <a

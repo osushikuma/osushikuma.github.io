@@ -7,8 +7,18 @@ export default function About() {
       <div className="container">
         <h2>ABOUT</h2>
         <div className="about-line">
-          <img src="images/about.png" alt="Me" width="200px" />
-          <p></p>
+          <img src="images/about.png" alt="Me" width="150px" />
+          <h3>Inspiring full-stack, improving one at a time.</h3>
+          <p>
+            Started my career as a front-end web developer during student
+            internship back in college. Shifted my career to application
+            configuration analyst where it didn't only tested my skills as a web
+            developer but also communication and problem-solving skills. After
+            one year of being an analyst, I went back to being front-end web
+            developer in Software Developer title. As I indulge myself with
+            helping the back-end support, I decided to take my career to be a
+            full-stack developer.
+          </p>
         </div>
         <h2>EXPERIENCE</h2>
         <div className="about-line">
@@ -29,8 +39,10 @@ export default function About() {
           </div>
           <p>
             Web construction using HTML5, CSS3, jQuery, Wordpress, WooThemes and
-            LESS SCSS from a given web design. Smartphone and mobile
-            compatibility using Bootstrap and other jQuery plugins.
+            LESS SCSS from a given web design. Used Adobe Photoshop to get the
+            design, photos and color schemes for the website to be developed.
+            Smartphone and mobile compatibility or responsiveness design using
+            Bootstrap and other jQuery plugins.
           </p>
           <span>Other tools used:</span>
           <ul className="tools">
@@ -84,7 +96,7 @@ export default function About() {
               <img src="images/bitbucket.png" alt="Bitbucket" />
             </li>
             <li>
-              <img src="images/datamaps.png" alt="DataMaps" />
+              <img src="images/data_maps.png" alt="DataMaps" />
             </li>
             <li>
               <img src="images/slack.png" alt="Slack" />
@@ -134,7 +146,7 @@ export default function About() {
             Manager to analyze and resolve configuration issues and answer
             client’s concern about the application. Use case management tool and
             standardized workflow to share work with other team members and
-            document interim work status. ConfirmIT
+            document interim work status.
           </p>
           <span>Other tools used:</span>
           <ul className="tools">
@@ -176,12 +188,15 @@ export default function About() {
             </div>
           </div>
           <p>
-            Developed and support existing application, using optimal and
-            efficient technologies, frameworks, and patterns. Used Jira and
+            Developed and supported existing HR management system software using
+            optimal and efficient technologies, frameworks, and patterns
+            including Bootstrap, jQuery, SASS and selectize.js. Used Jira and
             Confluence for given issues, new features and wireframes to design
             and develop into a new page, component or function. Mainly worked in
-            front-end but learnt how to support on back-end. Helped the
-            advertising team to go to clients for showing demo.
+            front-end but learnt how to support on back-end with C# and MS SQL.
+            Helped the advertising team to go to clients to perform demo of the
+            company's product. Almost fully-integrated the application from
+            ASP.NET-C#-jQuery to ASP.NET-C#-React but got postponed.
           </p>
           <span>Other tools used:</span>
           <ul className="tools">
@@ -204,7 +219,7 @@ export default function About() {
               <img src="images/ms-sql-server.png" alt="MS SQL Server" />
             </li>
             <li>
-              <img src="images/selectize.png" alt="selectize.js" />
+              <img src="images/selectizejs.png" alt="selectize.js" />
             </li>
           </ul>
         </div>
