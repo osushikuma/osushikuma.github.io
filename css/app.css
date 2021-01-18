@@ -243,8 +243,89 @@ h2 {
   color: #fff;
 }
 
-.about-line:not(:last-child) {
+.about-line {
   margin-bottom: 5rem;
+}
+
+.about-line:last-child {
+  margin-bottom: 2rem;
+}
+
+.company {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.comp-logo {
+  height: 60px;
+  padding-right: 3%;
+  text-align: right;
+  width: 25%;
+}
+
+.comp-logo img {
+  max-height: 60px;
+  max-width: 100%;
+}
+
+.details {
+  width: 75%;
+}
+
+.details p {
+  color: #8c7053;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.details p:last-child {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.details a {
+  color: #8c7053;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-line > p {
+  margin: 3% 0 3% 25%;
+  text-align: justify;
+  width: 75%;
+}
+
+.about-line > span {
+  display: block;
+  margin: 0 0 3% 25%;
+  text-align: justify;
+  width: 75%;
+}
+
+.tools {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0 0 0 25%;
+  width: 75%;
+}
+
+.tools li {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  margin: 0 4% 4% 0;
+  width: auto;
+}
+
+.tools li i {
+  font-size: 3.3rem;
+}
+
+.tools li img {
+  max-height: 40px;
+  max-width: 100px;
 }
 
 form {
@@ -389,6 +470,7 @@ form .btn--outline {
   }
 
   .container {
+    padding: 0 20px;
     width: 100%;
   }
 

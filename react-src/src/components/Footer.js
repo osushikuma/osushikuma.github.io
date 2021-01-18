@@ -12,6 +12,7 @@ function Footer() {
       <div className="footer-line social-icons">
         <a
           className="social-icon-link github"
+          rel="noreferrer"
           href="https://www.github.com/kirenariyu/"
           target="_blank"
           aria-label="GitHub"
@@ -20,6 +21,7 @@ function Footer() {
         </a>
         <a
           className="social-icon-link instagram"
+          rel="noreferrer"
           href="https://www.instagram.com/kirenariyu/"
           target="_blank"
           aria-label="Instagram"
@@ -28,6 +30,7 @@ function Footer() {
         </a>
         <a
           className="social-icon-link linkedin"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/kirenariyu"
           target="_blank"
           aria-label="LinkedIn"
@@ -36,6 +39,7 @@ function Footer() {
         </a>
         <a
           className="social-icon-link stack-overflow"
+          rel="noreferrer"
           href="https://www.stackoverflow.com/users/3618945/kirenariyu"
           target="_blank"
           aria-label="Stack Overflow"
@@ -44,6 +48,7 @@ function Footer() {
         </a>
         <a
           className="social-icon-link twitter"
+          rel="noreferrer"
           href="https://www.twitter.com/kirenariyu"
           target="_blank"
           aria-label="Twitter"
