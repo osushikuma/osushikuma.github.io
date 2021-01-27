@@ -6,6 +6,44 @@ function Skills() {
     <>
       <div id="Skills" className="skills-container container">
         <h2>SKILLS</h2>
+        <div className="other-skills-container">
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fab fa-accessible-icon" />
+            </div>
+            <span>Accessibility</span>
+          </div>
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fab fa-edge" />
+            </div>
+            <span>Cross-Browser</span>
+          </div>
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fas fa-project-diagram" />
+            </div>
+            <span>MVC</span>
+          </div>
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fa fa-mobile-alt" />
+            </div>
+            <span>Responsiveness</span>
+          </div>
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fa fa-cloud" />
+            </div>
+            <span>REST API</span>
+          </div>
+          <div className="other-skill">
+            <div className="other-skill-logo">
+              <i className="fa fa-window-restore" />
+            </div>
+            <span>Wireframing</span>
+          </div>
+        </div>
         <div className="cards-container">
           <Card
             logo={"fa"}
@@ -44,43 +82,6 @@ function Skills() {
             name={"Webpack"}
             per={"40%"}
           />
-        </div>
-        <span>
-          <i className="fa fa-circle" />
-          <i className="fa fa-circle" />
-          <i className="fa fa-circle" />
-        </span>
-        <div className="other-skills-container">
-          <div className="other-skill">
-            <div className="other-skill-logo">
-              <i className="fab fa-accessible-icon" />
-            </div>
-            <span>Accessibility / WAI-ARIA</span>
-          </div>
-          <div className="other-skill">
-            <div className="other-skill-logo">
-              <i className="fab fa-edge" />
-            </div>
-            <span>Cross-Browser Development</span>
-          </div>
-          <div className="other-skill">
-            <div className="other-skill-logo">
-              <i className="fas fa-project-diagram" />
-            </div>
-            <span>MVC Architecture</span>
-          </div>
-          <div className="other-skill">
-            <div className="other-skill-logo">
-              <i className="fa fa-mobile-alt" />
-            </div>
-            <span>Responsive / Mobile Design</span>
-          </div>
-          <div className="other-skill">
-            <div className="other-skill-logo">
-              <i className="fa fa-cloud" />
-            </div>
-            <span>RESTful Services / APIs</span>
-          </div>
         </div>
       </div>
     </>

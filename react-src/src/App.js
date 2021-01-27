@@ -2,8 +2,8 @@ import { Fragment, React } from "react";
 import { Switch, Route } from "react-router-dom";
 import About from "./components/About";
 import Banner from "./components/Banner";
+import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 
@@ -19,11 +19,11 @@ function App() {
               <Skills />
               <About />
               <Experience />
+              <Contact />
             </Fragment>
           )}
         />
       </Switch>
-      <Footer />
     </>
   );
 }

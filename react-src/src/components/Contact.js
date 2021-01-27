@@ -1,13 +1,18 @@
 import React from "react";
 
-function Footer() {
+function Contact() {
   return (
-    <div className="footer-container">
+    <div id="Contact" className="footer-container">
       <div className="footer-line">
         <img src="images/main_logo.png" alt="Main Logo" height="90px" />
       </div>
       <div className="footer-line">
         <p>Inspiring full-stack, improving one at a time.</p>
+      </div>
+      <div className="footer-line">
+        <p>
+          <a href="mailto:yumitakuma@outlook.com">yumitakuma@outlook.com</a>
+        </p>
       </div>
       <div className="footer-line social-icons">
         <a
@@ -56,6 +61,7 @@ function Footer() {
           <i className="fab fa-twitter" />
         </a>
       </div>
+
       <div className="footer-line">
         <p>@kirenariyu &copy; 2021</p>
       </div>
@@ -68,4 +74,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Contact;

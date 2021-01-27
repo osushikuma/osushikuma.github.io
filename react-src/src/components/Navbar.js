@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Interactive from "react-interactive";
 import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const scrollWidthOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = window.outerWidth <= "767" ? 0 : -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -15,47 +16,71 @@ function Navbar() {
           <Interactive
             as={HashLink}
             className="navbar-logo"
-            onClick={closeMobileMenu}
+            offset={-80}
+            scroll={(el) => scrollWidthOffset(el)}
             smooth
             to={`#Banner`}
           >
             <img src="images/main_logo.png" alt="Navbar Logo" />
           </Interactive>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fa fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+          <ul className="nav-menu">
+            <li className="mobile-only nav-item">
               <Interactive
                 as={HashLink}
                 className="nav-links"
-                onClick={closeMobileMenu}
+                scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#Skills`}
               >
-                Skills
+                <i className="fas fa-home"></i>
               </Interactive>
             </li>
             <li className="nav-item">
               <Interactive
                 as={HashLink}
                 className="nav-links"
-                onClick={closeMobileMenu}
+                scroll={(el) => scrollWidthOffset(el)}
+                smooth
+                to={`#Skills`}
+              >
+                <span>Skills</span>
+                <i className="fas fa-cog"></i>
+              </Interactive>
+            </li>
+            <li className="nav-item">
+              <Interactive
+                as={HashLink}
+                className="nav-links"
+                scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#About`}
               >
-                About
+                <span>About</span>
+                <i className="fas fa-user"></i>
               </Interactive>
             </li>
             <li className="nav-item">
               <Interactive
                 as={HashLink}
                 className="nav-links"
-                onClick={closeMobileMenu}
+                scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#Experience`}
               >
-                Experience
+                <span>Experience</span>
+                <i className="fas fa-briefcase"></i>
+              </Interactive>
+            </li>
+            <li className="nav-item">
+              <Interactive
+                as={HashLink}
+                className="nav-links"
+                scroll={(el) => scrollWidthOffset(el)}
+                smooth
+                to={`#Contact`}
+              >
+                <span>Contact</span>
+                <i className="fas fa-envelope"></i>
               </Interactive>
             </li>
           </ul>
