@@ -26,12 +26,17 @@
   padding: 0 !important;
 }
 
+.navbar-container span {
+  width: 30%;
+}
+
 .navbar-logo {
   align-items: center;
   cursor: pointer;
   display: flex;
   height: 80px;
   justify-self: start;
+  padding-left: 10px;
   text-decoration: none;
 }
 
@@ -108,7 +113,7 @@
   padding: 8px 20px;
 }
 
-.main-container {
+#Banner {
   background-color: #f1d587;
   color: #100e0d;
   height: 93vh;
@@ -121,7 +126,7 @@
   position: relative;
 }
 
-.main-container .container {
+#Banner .container {
   height: 100%;
 }
 
@@ -143,7 +148,7 @@ h1 span {
   color: #5c5246;
 }
 
-.main-container img {
+#Banner img {
   bottom: 0;
   position: absolute;
   right: 0;
@@ -303,6 +308,10 @@ h3 {
   text-decoration: none;
 }
 
+#About {
+  background-color: #f1d587;
+}
+
 .about-line > p {
   margin: 3% 0 3% 25%;
   text-align: justify;
@@ -333,11 +342,6 @@ h3 {
 
 .tools li i {
   font-size: 3.3rem;
-}
-
-.tools li img {
-  max-height: 40px;
-  max-width: 100px;
 }
 
 form {
@@ -499,7 +503,7 @@ form .btn--outline {
     font-size: 20px;
   }
 
-  .container:not(.navbar-container, .cards-container) img {
+  #Banner img {
     bottom: 0;
     left: 50%;
     max-height: 50%;
@@ -551,6 +555,11 @@ form .btn--outline {
   .other-skill span {
     font-size: 12px;
   }
+
+  .tools li img {
+    max-height: 25px;
+    max-width: 70px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -575,7 +584,7 @@ form .btn--outline {
     font-size: 30px;
   }
 
-  .main-container img {
+  #Banner img {
     height: auto;
     width: 20%;
   }
@@ -611,6 +620,11 @@ form .btn--outline {
   .other-skill-logo i {
     font-size: 35px;
   }
+
+  .tools li img {
+    max-height: 30px;
+    max-width: 80px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -622,7 +636,7 @@ form .btn--outline {
     width: 960px;
   }
 
-  .main-container img {
+  #Banner img {
     height: 75%;
     width: auto;
   }
@@ -646,6 +660,11 @@ form .btn--outline {
 
   .other-skill {
     width: 180px;
+  }
+
+  .tools li img {
+    max-height: 35px;
+    max-width: 90px;
   }
 }
 
@@ -684,5 +703,10 @@ form .btn--outline {
 
   .other-skill-logo i {
     font-size: 40px;
+  }
+
+  .tools li img {
+    max-height: 40px;
+    max-width: 100px;
   }
 }

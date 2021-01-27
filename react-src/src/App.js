@@ -2,6 +2,7 @@ import { Fragment, React } from "react";
 import { Switch, Route } from "react-router-dom";
 import About from "./components/About";
 import Banner from "./components/Banner";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
@@ -17,6 +18,7 @@ function App() {
               <Banner />
               <Skills />
               <About />
+              <Experience />
             </Fragment>
           )}
         />
