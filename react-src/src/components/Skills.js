@@ -1,20 +1,10 @@
 import React from "react";
-import Card from "../components/Card";
-import Footer from "../components/Footer";
+import Card from "./Card";
 
-function Home() {
+function Skills() {
   return (
     <>
-      <div className="main-container">
-        <div className="container">
-          <h1>
-            Kamusta, ako si <span>Yumi</span>. <br />
-            I'm a Front-end Web Developer.
-          </h1>
-          <img src="images/sushi_dog.png" alt="Sushi" />
-        </div>
-      </div>
-      <div className="skills-container container">
+      <div id="Skills" className="skills-container container">
         <h2>SKILLS</h2>
         <div className="cards-container">
           <Card
@@ -93,9 +83,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
 
-export default Home;
+export default Skills;

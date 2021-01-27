@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button } from "./Button";
-import { Link } from "react-router-dom";
+import Interactive from "react-interactive";
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,27 +12,37 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src="images/main_logo.png" alt="Navbar Logo" />
-          </Link>
+          <Interactive
+            as={HashLink}
+            className="navbar-logo"
+            onClick={closeMobileMenu}
+            to={`#Banner`}
+          >
+            <img src="images/main_logo.png" alt="Navbar Logo" /> &nbsp; YUMI
+          </Interactive>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
+              <Interactive
+                as={HashLink}
+                className="nav-links"
+                onClick={closeMobileMenu}
+                to={`#Skills`}
+              >
+                Skills
+              </Interactive>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+              <Interactive
+                as={HashLink}
+                className="nav-links"
+                onClick={closeMobileMenu}
+                to={`#About`}
+              >
                 About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact" className="nav-links">
-                <Button onClick={closeMobileMenu}>Say Hi</Button>
-              </Link>
+              </Interactive>
             </li>
           </ul>
         </div>

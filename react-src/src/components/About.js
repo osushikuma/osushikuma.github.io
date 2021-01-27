@@ -1,10 +1,9 @@
 import React from "react";
-import Footer from "../components/Footer";
 
 export default function About() {
   return (
     <>
-      <div className="container">
+      <div id="About" className="container">
         <h2>ABOUT</h2>
         <div className="about-line">
           <img src="images/about.png" alt="Me" width="150px" />
@@ -224,7 +223,6 @@ export default function About() {
           </ul>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
