@@ -1,0 +1,522 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// fonts
+$balsamiq: "Balsamiq Sans", cursive;
+$brown: #5c5246;
+$dbrown: #100e0d;
+$dyellow: #f1d587;
+$lbrown: #8c7053;
+$rubik: "Rubik", sans-serif;
+$yellow: #f2ec83;
+
+// mixins
+@mixin hc-image {
+  display: block;
+  margin: 0 auto;
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin grid($col-num) {
+  display: grid;
+  grid-template-columns: repeat($col-num, auto);
+  grid-gap: 10px;
+  height: inherit;
+}
+@mixin inline($jc-val: center) {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  height: inherit;
+  text-align: center;
+
+  @if $jc-val != center {
+    justify-content: $jc-val;
+  } @else {
+    justify-content: center;
+  }
+}
+@mixin laptop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin position($bottom, $left, $right, $top, $transX, $transY) {
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+  right: $right;
+  top: $top;
+  transform: translate($transX, $transY);
+}
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+@mixin tablet {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+html {
+  color: $dbrown;
+  font-family: $rubik;
+  font-weight: 400;
+  line-height: 1.5;
+  .container {
+    margin: 0 auto;
+    position: relative;
+  }
+  h1 {
+    @include position(unset, 0, unset, 50%, 0, -50%);
+    width: 100%;
+    &,
+    span {
+      font-family: $balsamiq;
+    }
+    span {
+      color: $brown;
+    }
+  }
+  h2 {
+    border-bottom: 4px solid $brown;
+    font-weight: 600;
+    margin: 0 auto 5rem;
+    padding-bottom: 10px;
+    text-align: center;
+    width: fit-content;
+  }
+  h3 {
+    font-weight: 600;
+    margin: 0 auto 4rem;
+    text-align: center;
+  }
+  nav {
+    background-color: #5c5246;
+    color: #f2ec83;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    .container {
+      @include inline(space-between);
+      padding: 0;
+      > span {
+        height: inherit;
+        .nav-logo {
+          @include inline;
+          img {
+            height: 70%;
+            padding-left: 10px;
+          }
+        }
+      }
+      .nav-menu {
+        @include grid(4);
+        @include reset-list;
+        li,
+        li > span {
+          @include inline;
+          a {
+            @include inline;
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+  #Banner {
+    background-color: $dyellow;
+    height: 93vh;
+    .container {
+      height: inherit;
+      position: relative;
+    }
+    img {
+      width: 15rem;
+    }
+  }
+  #Skills {
+    .skills-container {
+      @include grid(6);
+      margin-bottom: 5rem;
+      .skill {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .skill-logo {
+          align-items: center;
+          background-color: $lbrown;
+          border: 4px solid $dbrown;
+          border-radius: 6rem;
+          display: flex;
+          justify-content: center;
+          height: 6rem;
+          margin-bottom: 18px;
+          width: 6rem;
+          i {
+            color: #ffffff;
+            font-size: 2em;
+          }
+        }
+      }
+    }
+    .tools-container {
+      @include grid(5);
+      .tool {
+        border: 4px solid $brown;
+        border-radius: 6px;
+        .tool-logo {
+          height: 120px;
+          position: relative;
+          i,
+          img {
+            @include position(unset, 50%, unset, 50%, -50%, -50%);
+            display: block;
+            font-size: 4em;
+            max-height: 100%;
+            max-width: 100%;
+            padding: 25px;
+          }
+        }
+        .tool-name {
+          border: 4px solid $brown;
+          border-left: none;
+          border-right: none;
+          padding: 6px 0;
+          text-align: center;
+          width: 100%;
+        }
+        .tool-bar {
+          height: 24px;
+          position: relative;
+          .fill {
+            background-color: $lbrown;
+            border-bottom-left-radius: 3px;
+            height: 25px;
+          }
+          span {
+            @include position(unset, unset, 4px, 50%, 0, -50%);
+          }
+        }
+      }
+    }
+  }
+  #About {
+    background-color: $dyellow;
+    text-align: justify;
+    img {
+      @include hc-image;
+      margin-bottom: 5rem;
+      width: 120px;
+    }
+  }
+  #Experience {
+    .exp-section {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      .company {
+        @include inline;
+        .comp-logo {
+          width: 30%;
+          img {
+            max-width: 50%;
+          }
+        }
+        .comp-info {
+          font-size: 1.1em;
+          text-align: left;
+          width: 70%;
+          p,
+          a {
+            color: $brown;
+            font-weight: 600;
+          }
+          p:last-child {
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+      ul {
+        margin-left: 30%;
+        margin-top: 2rem;
+        width: 70%;
+        li {
+          margin-left: 1em;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  #Contact {
+    background-color: $lbrown;
+    color: $yellow;
+    text-align: center;
+    .container {
+      div {
+        margin: 20px auto;
+        &.social-icons {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          padding: 5px 0;
+          width: 200px;
+        }
+        img {
+          width: 120px;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  #Skills {
+    .skills-container {
+      grid-template-columns: repeat(2, auto) !important;
+      .skill {
+        &:nth-child(n + 3) {
+          margin-top: 3rem;
+        }
+      }
+    }
+    .tools-container {
+      .tool-name {
+        width: 50% !important;
+      }
+      .tool-bar {
+        width: 45% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+    .container {
+      padding: 5rem 25px;
+      width: 100%;
+    }
+    .mobile {
+      display: block;
+    }
+    .non-mobile {
+      display: none !important;
+    }
+    h1 {
+      @include position(unset, 50%, unset, 30%, -50%, -50%);
+      font-size: 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    nav {
+      bottom: 0;
+      height: 55px;
+      position: fixed;
+      top: unset;
+      width: 100%;
+      .container {
+        justify-content: center;
+        .nav-menu {
+          @include inline(space-around);
+          width: 100%;
+        }
+      }
+    }
+    #Banner {
+      img {
+        @include position(0, 50%, unset, unset, -50%, 0);
+        max-height: 40%;
+        width: auto;
+      }
+    }
+    #Skills {
+      .skills-container {
+        @include grid(3);
+        margin-bottom: 5rem;
+        .skill {
+          &:nth-child(n + 4) {
+            margin-top: 3rem;
+          }
+        }
+      }
+      .tools-container {
+        @include grid(1);
+        .tool {
+          @include inline;
+          height: 33px;
+          .tool-logo {
+            height: inherit;
+            position: relative;
+            width: 15%;
+            i,
+            img {
+              font-size: inherit;
+              max-height: 100%;
+              padding: 10px;
+              max-width: 100%;
+            }
+          }
+          .tool-name {
+            border-bottom: none;
+            border-left: 4px solid $brown;
+            border-right: 4px solid $brown;
+            border-top: none;
+            width: 30%;
+          }
+          .tool-bar {
+            align-items: inherit;
+            display: flex;
+            width: 55%;
+            .fill {
+              border-bottom-left-radius: 0;
+            }
+          }
+        }
+      }
+    }
+    #Experience {
+      .exp-section {
+        .company {
+          display: block;
+          .comp-logo {
+            margin-bottom: 1rem;
+            width: 100%;
+            img {
+              max-height: 45px;
+              max-width: 160px;
+            }
+          }
+          .comp-info {
+            font-size: 1em;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        ul {
+          margin-left: 0;
+          margin-top: 1rem;
+          width: 100%;
+          li {
+            text-align: justify;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      margin-bottom: 54px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  html {
+    font-size: 16px;
+    .container {
+      padding: 5rem 0;
+      width: 720px;
+    }
+    .mobile {
+      display: none !important;
+    }
+    .non-mobile {
+      display: block;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    nav {
+      a:hover {
+        border-bottom: 4px solid #f2ec83;
+        transition: all 0.2s ease-out;
+      }
+    }
+    #Banner {
+      img {
+        @include position(0, unset, 0, unset, 0, 0);
+      }
+    }
+    #Skills {
+      .tools-container {
+        @include grid(3);
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+    .container {
+      width: 960px;
+    }
+    h1 {
+      font-size: 34px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+    #Skills {
+      .tools-container {
+        @include grid(4);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+    .container {
+      width: 1140px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+}

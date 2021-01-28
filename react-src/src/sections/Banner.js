@@ -3,10 +3,10 @@ import React from "react";
 function Banner() {
   return (
     <>
-      <div id="Banner" className="main-container">
+      <div id="Banner">
         <div className="container">
           <h1>
-            Kamusta, ako si <span>Yumi</span>. <br />
+            Hi, my name is <span>Yumi</span>. <br />
             I'm a Front-end Web Developer.
           </h1>
           <img src="images/sushi_dog.png" alt="Sushi" />

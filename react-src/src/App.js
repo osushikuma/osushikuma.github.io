@@ -1,11 +1,12 @@
 import { Fragment, React } from "react";
 import { Switch, Route } from "react-router-dom";
-import About from "./components/About";
-import Banner from "./components/Banner";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
+import "./App.scss";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
+import About from "./sections/About";
+import Banner from "./sections/Banner";
+import Contact from "./sections/Contact";
+import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
 
 function App() {
   return (

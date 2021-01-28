@@ -2,7 +2,7 @@ import React from "react";
 import Interactive from "react-interactive";
 import { HashLink } from "react-router-hash-link";
 
-function Navbar() {
+export default function Navbar() {
   const scrollWidthOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = window.outerWidth <= "767" ? 0 : -80;
@@ -11,11 +11,11 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container container">
+      <nav>
+        <div className="container">
           <Interactive
             as={HashLink}
-            className="navbar-logo"
+            className="nav-logo non-mobile"
             offset={-80}
             scroll={(el) => scrollWidthOffset(el)}
             smooth
@@ -24,63 +24,58 @@ function Navbar() {
             <img src="images/main_logo.png" alt="Navbar Logo" />
           </Interactive>
           <ul className="nav-menu">
-            <li className="mobile-only nav-item">
+            <li className="mobile">
               <Interactive
                 as={HashLink}
-                className="nav-links"
+                scroll={(el) => scrollWidthOffset(el)}
+                smooth
+                to={`#Banner`}
+              >
+                <i className="fas fa-home mobile"></i>
+              </Interactive>
+            </li>
+            <li>
+              <Interactive
+                as={HashLink}
                 scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#Skills`}
               >
-                <i className="fas fa-home"></i>
+                <span className="non-mobile">Skills</span>
+                <i className="fas fa-cog mobile"></i>
               </Interactive>
             </li>
-            <li className="nav-item">
+            <li>
               <Interactive
                 as={HashLink}
-                className="nav-links"
-                scroll={(el) => scrollWidthOffset(el)}
-                smooth
-                to={`#Skills`}
-              >
-                <span>Skills</span>
-                <i className="fas fa-cog"></i>
-              </Interactive>
-            </li>
-            <li className="nav-item">
-              <Interactive
-                as={HashLink}
-                className="nav-links"
                 scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#About`}
               >
-                <span>About</span>
-                <i className="fas fa-user"></i>
+                <span className="non-mobile">About</span>
+                <i className="fas fa-user mobile"></i>
               </Interactive>
             </li>
-            <li className="nav-item">
+            <li>
               <Interactive
                 as={HashLink}
-                className="nav-links"
                 scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#Experience`}
               >
-                <span>Experience</span>
-                <i className="fas fa-briefcase"></i>
+                <span className="non-mobile">Experience</span>
+                <i className="fas fa-briefcase mobile"></i>
               </Interactive>
             </li>
-            <li className="nav-item">
+            <li>
               <Interactive
                 as={HashLink}
-                className="nav-links"
                 scroll={(el) => scrollWidthOffset(el)}
                 smooth
                 to={`#Contact`}
               >
-                <span>Contact</span>
-                <i className="fas fa-envelope"></i>
+                <span className="non-mobile">Contact</span>
+                <i className="fas fa-envelope mobile"></i>
               </Interactive>
             </li>
           </ul>
@@ -89,5 +84,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
