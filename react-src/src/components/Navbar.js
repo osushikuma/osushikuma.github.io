@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Interactive from "react-interactive";
 import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
+  const [fa, setFa] = useState("fas");
+
+  const handleClick = (fa) => setFa(fa);
   const scrollWidthOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = window.outerWidth <= "767" ? 0 : -80;
@@ -77,6 +80,25 @@ export default function Navbar() {
                 <span className="non-mobile">Contact</span>
                 <i className="fas fa-envelope mobile"></i>
               </Interactive>
+            </li>
+            <li>
+              <a
+                onClick={() => {
+                  var root = document.getElementById("root");
+
+                  if (root.classList.contains("dark-theme")) {
+                    root.classList.remove("dark-theme");
+                    root.classList.add("light-theme");
+                    handleClick("fas");
+                  } else {
+                    root.classList.remove("light-theme");
+                    root.classList.add("dark-theme");
+                    handleClick("far");
+                  }
+                }}
+              >
+                <i className={`${fa} fa-lightbulb`}></i>
+              </a>
             </li>
           </ul>
         </div>

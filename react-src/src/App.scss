@@ -6,11 +6,14 @@
 
 // fonts
 $balsamiq: "Balsamiq Sans", cursive;
+$black: #000000;
 $brown: #5c5246;
 $dbrown: #100e0d;
 $dyellow: #f1d587;
+$gray: #808080;
 $lbrown: #8c7053;
 $rubik: "Rubik", sans-serif;
+$white: #ffffff;
 $yellow: #f2ec83;
 
 // mixins
@@ -76,7 +79,8 @@ $yellow: #f2ec83;
   }
 }
 
-html {
+#root {
+  background-color: $white;
   color: $dbrown;
   font-family: $rubik;
   font-weight: 400;
@@ -130,13 +134,14 @@ html {
         }
       }
       .nav-menu {
-        @include grid(4);
+        @include grid(5);
         @include reset-list;
         li,
         li > span {
           @include inline;
           a {
             @include inline;
+            cursor: pointer;
             padding: 0 1rem;
           }
         }
@@ -174,7 +179,7 @@ html {
           margin-bottom: 18px;
           width: 6rem;
           i {
-            color: #ffffff;
+            color: $white;
             font-size: 2em;
           }
         }
@@ -303,7 +308,86 @@ html {
   }
 }
 
+#root.dark-theme {
+  background-color: $black;
+  color: $white;
+  h1 span {
+    color: $white;
+  }
+  h2 {
+    border-bottom-color: $white;
+  }
+  nav,
+  #Banner,
+  #Skills,
+  #About,
+  #Experience,
+  #Contact {
+    background-color: $black;
+    border-top: none;
+    color: $white;
+    @include mobile {
+      &:not(#Banner) {
+        border-top: 1px solid $gray;
+      }
+    }
+    @include tablet {
+      &:not(#Contact) {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+  nav {
+    @include tablet {
+      li:not(:last-child) a:hover {
+        border-bottom: 4px solid $white;
+      }
+    }
+  }
+  #Skills {
+    .skills-container {
+      .skill-logo {
+        background-color: $white;
+        border-color: $white;
+        i {
+          color: $black;
+        }
+      }
+    }
+    .tools-container {
+      .tool {
+        border-color: $white;
+        .tool-logo {
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+        .tool-name {
+          border-color: $white;
+        }
+        .tool-bar .fill {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  #Experience {
+    .company .comp-info p,
+    .company .comp-info a {
+      color: $white;
+    }
+  }
+}
+
 @media (max-width: 350px) {
+  nav {
+    .nav-menu {
+      grid-gap: 5px !important;
+      a {
+        padding: 0 0.5rem !important;
+      }
+    }
+  }
   #Skills {
     .skills-container {
       grid-template-columns: repeat(2, auto) !important;
@@ -325,7 +409,7 @@ html {
 }
 
 @media (max-width: 767px) {
-  html {
+  #root {
     font-size: 14px;
     .container {
       padding: 5rem 25px;
@@ -449,7 +533,7 @@ html {
 }
 
 @media (min-width: 767px) {
-  html {
+  #root {
     font-size: 16px;
     .container {
       padding: 5rem 0;
@@ -468,9 +552,11 @@ html {
       font-size: 20px;
     }
     nav {
-      a:hover {
-        border-bottom: 4px solid #f2ec83;
-        transition: all 0.2s ease-out;
+      li:not(:last-child) {
+        a:hover {
+          border-bottom: 4px solid #f2ec83;
+          transition: all 0.2s ease-out;
+        }
       }
     }
     #Banner {
@@ -487,7 +573,7 @@ html {
 }
 
 @media (min-width: 992px) {
-  html {
+  #root {
     font-size: 16px;
     .container {
       width: 960px;
@@ -507,7 +593,7 @@ html {
 }
 
 @media (min-width: 1200px) {
-  html {
+  #root {
     font-size: 18px;
     .container {
       width: 1140px;
