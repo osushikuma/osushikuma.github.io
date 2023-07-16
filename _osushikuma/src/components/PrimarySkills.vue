@@ -79,9 +79,9 @@ ul {
     text-align: center;
     span {
       align-items: center;
-      background-color: var(--color-gray-3);
+      background-color: var(--color-secondary);
       border-radius: 100%;
-      color: var(--color-beige);
+      color: var(--color-accent-2);
       display: flex;
       font-size: 18px;
       height: 48px;
@@ -93,7 +93,7 @@ ul {
 @media screen and (min-width: 768px) {
   ul {
     gap: 24px;
-    grid-template-columns: repeat(4, 1fr);;
+    grid-template-columns: repeat(4, 1fr);
     li {
       gap: 12px;
       span {

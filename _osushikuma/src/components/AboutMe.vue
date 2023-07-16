@@ -42,7 +42,7 @@ export default {
     position: relative;
     width: 100%;
     &:before {
-      background-color: var(--color-gray-4);
+      background-color: var(--color-accent-2);
       content: "";
       bottom: 0;
       display: block;
@@ -54,7 +54,7 @@ export default {
     }
   }
   &__intro {
-    background-color: var(--color-gray-4);
+    background-color: var(--color-accent-2);
     line-height: 1.5;
     h3 {
       font-weight: 700;

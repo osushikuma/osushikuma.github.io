@@ -27,21 +27,21 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  background-color: var(--color-gray-3);
+  background-color: var(--color-accent-1);
   border-radius: 6px;
-  box-shadow: 0 6px 12px var(--color-amethyst);
+  box-shadow: 0 6px 12px var(--color-secondary);
   max-width: 300px;
   width: 80%;
   &__title {
     align-items: center;
-    color: var(--color-beige);
+    color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 60px 30px;
     div {
       align-items: center;
-      background-color: var(--color-gray);
+      background-color: var(--color-text);
       border-radius: 100%;
       display: flex;
       height: 160px;
@@ -54,7 +54,7 @@ export default {
       }
     }
     hr {
-      background-color: var(--color-beige);
+      background-color: var(--color-primary);
       border: none;
       display: block;
       height: 1px;
@@ -76,7 +76,7 @@ export default {
     }
   }
   &__social-medias {
-    background-color: var(--color-beige);
+    background-color: var(--color-primary);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     padding: 18px;

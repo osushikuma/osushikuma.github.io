@@ -158,13 +158,15 @@ ul {
     span {
       display: flex;
       align-items: center;
-      color: var(--color-gray-3);
+      color: var(--color-text);
       font-size: 24px;
       justify-content: center;
       img {
-        fill: var(--color-gray-3);
         height: auto;
         width: 85%;
+        path {
+          fill: var(--color-text);
+        }
       }
     }
   }
@@ -172,7 +174,7 @@ ul {
 @media screen and (min-width: 768px) {
   ul {
     gap: 24px;
-    grid-template-columns: repeat(10, 1fr);;
+    grid-template-columns: repeat(10, 1fr);
     li {
       gap: 12px;
       span {

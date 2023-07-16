@@ -19,18 +19,18 @@ export default {
 
 <style lang="scss">
 :root {
-  // light mode
-  --color-amethyst: #9a92a6;
-  --color-beige: #f0f2dc;
-  --color-gray: #8b878c;
-  --color-gray-3: #a6a1a5;
-  --color-gray-4: #d9d8d0;
-  // dark mode
-  --color-blue: #1a2039;
-  --color-blue-2: #222845;
-  --color-blue-3: #272c4a;
-  --color-gray-2: #a1a5ab;
-  --color-white: #e6eef8;
+  --color-primary: #f0f2dc; // beige
+  --color-secondary: #9a92a6; // amethyst
+  --color-text: #8b878c; // gray
+  --color-accent-1: #a6a1a5; // gray-3
+  --color-accent-2: #d9d8d0; // gray-4
+}
+:root.dark-mode {
+  --color-primary: #1a2039; // blue
+  --color-secondary: #a1a5ab; // gray-2
+  --color-text: #e6eef8; // white
+  --color-accent-1: #222845; // blue-2
+  --color-accent-2: #272c4a; // blue-3
 }
 *,
 *:after,
@@ -45,8 +45,8 @@ body,
   width: 100%;
 }
 body {
-  background-color: var(--color-beige);
-  color: var(--color-gray);
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 a {
   color: inherit;

@@ -14,12 +14,46 @@
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
           <li><router-link to="/resume">Resume</router-link></li>
-          <li><font-awesome-icon icon="fa-solid fa-lightbulb" /></li>
+          <li>
+            <button @click="toggleDarkMode">
+              <font-awesome-icon icon="fa-solid fa-lightbulb" />
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isDarkMode: false,
+    };
+  },
+  mounted() {
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode) {
+      this.isDarkMode = JSON.parse(storedDarkMode);
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
+      localStorage.setItem("darkMode", this.isDarkMode);
+
+      const rootElement = document.documentElement;
+
+      if (this.isDarkMode) {
+        rootElement.classList.add("dark-mode");
+      } else {
+        rootElement.classList.remove("dark-mode");
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 header {
@@ -27,7 +61,7 @@ header {
   width: 100%;
   .header {
     align-items: center;
-    background-color: var(--color-beige);
+    background-color: var(--color-primary);
     display: flex;
     height: 130px;
     justify-content: center;
@@ -41,9 +75,20 @@ header {
     nav {
       ul {
         align-content: center;
+        align-items: center;
         display: flex;
         gap: 18px;
         text-transform: uppercase;
+        button {
+          background: transparent;
+          border: none;
+          color: inherit;
+          cursor: pointer;
+          font-size: 20px;
+          svg {
+            color: inherit;
+          }
+        }
       }
     }
   }
