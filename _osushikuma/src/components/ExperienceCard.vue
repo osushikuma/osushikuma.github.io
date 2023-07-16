@@ -1,32 +1,48 @@
 <template>
-  <div :class="`experience-card ${readMore ? 'is-active' : ''}`">
+  <div
+    :class="`experience-card ${
+      readMore || !item.technology ? 'is-active' : ''
+    }`"
+  >
     <div class="experience-card__content">
-      <img :src="getImagePath(item.img)" :alt="item.img" />
-      <p class="experience-card__date">{{ item.date }}</p>
+      <img :src="getImagePath(item.img)" :alt="item.img" v-if="item.img" />
+      <p class="experience-card__date" v-if="item.date">{{ item.date }}</p>
       <div class="experience-card__info">
-        <div :class="`experience-card__title ${!item.tasks ? 'is-solo' : ''}`">
+        <div
+          :class="`experience-card__title ${!item.descriptions ? 'is-solo' : ''}`"
+          v-if="item.position && item.company && item.location"
+        >
           <p>{{ item.position }}</p>
           <p>{{ item.company }}</p>
           <p>{{ item.location }}</p>
         </div>
-        <div class="experience-card__description" v-if="item.tasks">
+        <div
+          :class="`experience-card__description ${
+            !item.position && !item.company && !item.location ? 'is-solo' : ''
+          }`"
+          v-if="item.descriptions"
+        >
           <ul>
             <li
-              v-for="(task, index) in item.tasks"
+              v-for="(description, index) in item.descriptions"
               :key="index"
-              :class="isHeading(task) ? 'is-heading' : ''"
+              :class="isHeading(description) ? 'is-heading' : ''"
             >
-              {{ task }}
+              {{ description }}
             </li>
           </ul>
         </div>
       </div>
-      <div class="experience-card__tech">
+      <div class="experience-card__tech" v-if="item.technology">
         <p>Technology:</p>
         <p>{{ item.technology }}</p>
       </div>
     </div>
-    <a class="experience-card__read-more" @click="toggleReadMore">
+    <a
+      class="experience-card__read-more"
+      @click="toggleReadMore"
+      v-if="item.technology"
+    >
       Read <span v-if="readMore">less</span
       ><span v-if="!readMore">more</span>...
     </a>
@@ -70,13 +86,13 @@ export default {
   background-color: var(--color-gray-4);
   border-radius: 6px;
   box-shadow: 0 6px 12px var(--color-amethyst);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   padding: 30px;
   &:not(.is-active) &__content {
     overflow: hidden;
     position: relative;
-    height: 300px;
+    height: 250px;
     &:after {
       background-color: var(--color-gray-4);
       bottom: 0;
@@ -98,8 +114,8 @@ export default {
     display: block;
     height: auto;
     margin: 0 auto 12px;
-    max-height: 150px;
-    max-width: 200px;
+    max-height: 120px;
+    max-width: 120px;
     width: auto;
   }
   &__date {
@@ -138,28 +154,20 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .experience-card {
-    padding: 60px;
-    &__content {
-      gap: 18px;
-    }
-    img {
-      margin-bottom: 12px;
-    }
     &__info {
       display: flex;
     }
     &__title {
-      padding-right: 18px;
       &:not(.is-solo) {
+        padding-right: 18px;
         width: 40%;
-      }
-      p:first-child {
-        margin-bottom: 18px;
       }
     }
     &__description {
       margin-top: 0;
-      width: 60%;
+      &:not(.is-solo) {
+        width: 60%;
+      }
     }
   }
 }

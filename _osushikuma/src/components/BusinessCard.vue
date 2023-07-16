@@ -101,11 +101,15 @@ export default {
     }
   }
   &__info {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 6px;
     text-align: center;
     width: 100%;
+    a {
+      width: fit-content;
+    }
   }
 }
 @media screen and (min-width: 768px) {
