@@ -27,21 +27,20 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  background-color: var(--color-accent-1);
+  background-color: var(--color-light-accent-1);
   border-radius: 6px;
-  box-shadow: 0 6px 12px var(--color-secondary);
+  box-shadow: 0 6px 12px var(--color-dark-accent);
   max-width: 300px;
   width: 80%;
   &__title {
     align-items: center;
-    color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 60px 30px;
     div {
       align-items: center;
-      background-color: var(--color-text);
+      background-color: var(--color-light-accent-2);
       border-radius: 100%;
       display: flex;
       height: 160px;

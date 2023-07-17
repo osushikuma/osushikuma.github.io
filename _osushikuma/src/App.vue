@@ -21,16 +21,18 @@ export default {
 :root {
   --color-primary: #f0f2dc; // beige
   --color-secondary: #9a92a6; // amethyst
-  --color-text: #8b878c; // gray
-  --color-accent-1: #a6a1a5; // gray-3
-  --color-accent-2: #d9d8d0; // gray-4
+  --color-text: #3b3a3b; // black
+  --color-dark-accent: #484549; // gray
+  --color-light-accent-1: #c5bfc3; // gray-3
+  --color-light-accent-2: #d9d8d0; // gray-4
 }
 :root.dark-mode {
   --color-primary: #1a2039; // blue
   --color-secondary: #a1a5ab; // gray-2
-  --color-text: #e6eef8; // white
-  --color-accent-1: #222845; // blue-2
-  --color-accent-2: #272c4a; // blue-3
+  --color-text: #cdd5df; // white
+  --color-dark-accent: #6885ad; // white-2
+  --color-light-accent-1: #222845; // blue-2
+  --color-light-accent-2: #272c4a; // blue-3
 }
 *,
 *:after,

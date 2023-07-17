@@ -163,7 +163,8 @@ ul {
       justify-content: center;
       img {
         height: auto;
-        width: 85%;
+        opacity: 65%;
+        width: 65%;
         path {
           fill: var(--color-text);
         }

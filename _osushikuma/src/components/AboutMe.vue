@@ -38,11 +38,11 @@ export default {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 0;
+    padding-top: 10px;
     position: relative;
     width: 100%;
     &:before {
-      background-color: var(--color-accent-2);
+      background-color: var(--color-light-accent-2);
       content: "";
       bottom: 0;
       display: block;
@@ -54,7 +54,7 @@ export default {
     }
   }
   &__intro {
-    background-color: var(--color-accent-2);
+    background-color: var(--color-light-accent-2);
     line-height: 1.5;
     h3 {
       font-weight: 700;

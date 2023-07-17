@@ -166,7 +166,7 @@ export default {
 <style lang="scss" scoped>
 .my-resume {
   align-items: center;
-  background-color: var(--color-secondary);
+  background-color: var(--color-light-accent-2);
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -177,15 +177,15 @@ export default {
     max-width: 780px;
     width: 100%;
     h3 {
-      color: var(--color-primary);
+      color: var(--color-dark-primary);
       font-size: 20px;
       font-weight: 700;
     }
   }
   &__card {
-    background-color: var(--color-accent-2);
+    background-color: var(--color-light-accent-1);
     border-radius: 6px;
-    box-shadow: 0 6px 12px var(--color-secondary);
+    box-shadow: 0 6px 12px var(--color-dark-accent);
     font-size: 14px;
     line-height: 1.5;
     padding: 30px;

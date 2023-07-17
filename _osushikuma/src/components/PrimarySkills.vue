@@ -81,7 +81,7 @@ ul {
       align-items: center;
       background-color: var(--color-secondary);
       border-radius: 100%;
-      color: var(--color-accent-2);
+      color: var(--color-light-accent-2);
       display: flex;
       font-size: 18px;
       height: 48px;

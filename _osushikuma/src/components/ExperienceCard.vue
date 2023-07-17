@@ -83,9 +83,9 @@ export default {
 
 <style lang="scss" scoped>
 .experience-card {
-  background-color: var(--color-accent-2);
+  background-color: var(--color-light-accent-1);
   border-radius: 6px;
-  box-shadow: 0 6px 12px var(--color-secondary);
+  box-shadow: 0 6px 12px var(--color-dark-accent);
   font-size: 14px;
   line-height: 1.5;
   padding: 30px;
@@ -94,7 +94,7 @@ export default {
     position: relative;
     height: 250px;
     &:after {
-      background-color: var(--color-accent-2);
+      background-color: var(--color-light-accent-1);
       bottom: 0;
       content: "";
       height: 30px;
@@ -153,7 +153,7 @@ export default {
 }
 .dark-mode {
   img {
-    background-color: var(--color-secondary);
+    background-color: var(--color-text);
     padding: 20px;
     border-radius: 6px;
   }
